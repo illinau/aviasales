@@ -1,0 +1,37 @@
+.style{
+  width: 502px;
+  height: 184px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-family: "Open Sans", serif;
+  margin: 0 0 20px 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 20px 0 20px;
+}
+
+.price{
+  color: #2196F3;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.row{
+  color: #A0B0B9;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  padding: 20px 20px 20px 20px;
+  font-size: 12px;
+}
+
+.info {
+  font-weight: 500;
+}

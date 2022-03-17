@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: local('../Fonts/OpenSans/OpenSans-Regular.ttf');
+}
+
+input {
+  color: #2196F3;
+  width: 20px;
+  height: 20px;
+  margin: 0 15px 0 15px;
+}
+
+label {
+  padding: 10px 0 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+label:hover,
+input:hover {
+  cursor: pointer;
+  background-color: #F1FCFF;
+}
+
+span {
+  width: 112px;
+  height: 20px;
+}
+
+.style {
+  font-family: "Open Sans", serif;
+  display: flex;
+  flex-direction: column;
+  width: 232px;
+  height: 252px;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 12px;
+  justify-content: space-around;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0 20px 0 103px;
+}
+
+.title {
+  text-align: center;
+  padding: 20px 0 10px 0;
+  font-weight: 500;
+}

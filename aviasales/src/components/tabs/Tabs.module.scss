@@ -1,0 +1,33 @@
+button {
+  background-color: white;
+  width: 168px;
+  height: 50px;
+  font-size: 12px;
+  font-family: "Open Sans", serif;
+  border: 1px solid #DFE5EC;
+}
+
+button:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+button:focus {
+  background-color: #2196F3;
+  color: white;
+  border-color: black;
+}
+
+.left {
+  border-radius: 5% 0 0 5%;
+}
+
+.right {
+  border-radius: 0 5% 5% 0;
+}
+
+.group {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 0 20px 0;
+}

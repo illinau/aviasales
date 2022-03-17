@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: local('../Fonts/OpenSans/OpenSans-Regular.ttf');
+}
+
+body {
+  background-color: #E5E5E5;
+}
+
+.sort {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
