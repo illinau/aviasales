@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { Provider } from "react-redux";
+import state from "./state/state";
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={state}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root'),
 );
 export default App;
