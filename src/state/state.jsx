@@ -3,19 +3,18 @@ import thunk from 'redux-thunk';
 import rootReducer from './rootReducer';
 
 const composeEnhancers =
-    typeof window === 'object' &&
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
-        window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}) : compose;
+    typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+      ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
+      : compose;
 
-const logger = (store) => (next) => (action) => {
-    const result = next(action);
-    console.log(store.getState());
-    return result;
+const logger = store => next => action => {
+  const result = next(action);
+  return result;
 };
 
-const store = createStore(rootReducer, composeEnhancers(applyMiddleware(
-    logger,
-    thunk
-)));
+const store = createStore(
+  rootReducer,
+  composeEnhancers(applyMiddleware(logger, thunk)),
+);
 
 export default store;

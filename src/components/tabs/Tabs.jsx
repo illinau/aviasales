@@ -1,32 +1,30 @@
 import React from 'react';
 
+import { connect } from 'react-redux';
 import classes from './Tabs.module.scss';
-import {connect} from "react-redux";
-import * as actions from "../../state/actions";
+import * as actions from '../../state/actions';
 
-const Tabs = ({ FILTERS_CHEAPEST, FILTERS_FASTEST}) => (
+const Tabs = ({ FILTERS_CHEAPEST, FILTERS_FASTEST }) => (
   <div className={classes.group}>
-    <button className={classes.left}
-            type="button"
-            onClick={FILTERS_CHEAPEST}>
-        САМЫЙ ДЕШЕВЫЙ
+    <button
+      className={classes.left}
+      type="button"
+      onClick={FILTERS_CHEAPEST}
+    >
+      САМЫЙ ДЕШЕВЫЙ
     </button>
-    <button type="button"
-            onClick={FILTERS_FASTEST}>
-        САМЫЙ БЫСТРЫЙ
+    <button type="button" onClick={FILTERS_FASTEST}>
+      САМЫЙ БЫСТРЫЙ
     </button>
-    <button className={classes.right}
-            type="button">
-        ОПТИМАЛЬНЫЙ
+    <button className={classes.right} type="button">
+      ОПТИМАЛЬНЫЙ
     </button>
   </div>
 );
 
-const mapStateToProps = (state) => {
-    return {
-        transfers: state.transfers,
-        filters: state.filters,
-    }
-}
+const mapStateToProps = state => ({
+  transfers: state.transfers,
+  filters: state.filters,
+});
 
 export default connect(mapStateToProps, actions)(Tabs);
